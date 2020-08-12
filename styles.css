@@ -1,0 +1,32 @@
+.banner {
+  width: 300px;
+  height: 250px;
+  position: relative;
+}
+.banner .icon {
+  width: 35px;
+  height: 31px;
+  position: absolute;
+}
+.banner #icon1 {
+  bottom: 10px;
+  left: 40px;
+  background-image: url("./assets/Group 5.png");
+}
+.banner #icon2 {
+  bottom: 10px;
+  left: 100px;
+  background-image: url("./assets/Group 3.png");
+}
+.banner #icon3 {
+  bottom: 10px;
+  left: 155px;
+  background-image: url("./assets/Rectangle 6 copy 6.png");
+}
+.banner #icon4 {
+  bottom: 10px;
+  left: 210px;
+  background-image: url("./assets/Group 4.png");
+}
+
+/*# sourceMappingURL=styles.css.map */
