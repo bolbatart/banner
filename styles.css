@@ -3,6 +3,11 @@
   height: 250px;
   position: relative;
 }
+.banner #bg-after {
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+}
 .banner .icon {
   width: 35px;
   height: 31px;

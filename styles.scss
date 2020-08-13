@@ -2,7 +2,14 @@
   width: 300px;
   height: 250px;
   position: relative;
+  // background-image: url('./assets//Bongo\ Bondhu\ -\ Drag\ _\ Drop\ -\ Before\ -\ 300_250.png');
+  // background-color: red;
   // use as vairable in #icon...
+  #bg-after {
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+  }
   .icon {
     width: 35px;
     height: 31px;

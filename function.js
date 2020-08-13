@@ -16,18 +16,26 @@ function checkIfPositionsCorrect() {
     icon4[0].endX === f4.x &&
     icon4[0].endY === f4.y
   ) {
-    console.log('succes');
-    document.querySelectorAll('.icon').forEach((el) => el.remove());
-    document.querySelector('#background').src =
-      './assets/Bongo Bondhu - Drag _ Drop - After - 300_250.png';
+    // iscezajushie ikonki
+    TweenLite.to(document.querySelectorAll('.icon'), 0.5, {
+      autoAlpha: 0,
+      scale: 0,
+    });
+    // before -> after
+    TweenMax.to(document.getElementById('bg-before'), 1, {
+      autoAlpha: 0,
+    });
+    TweenMax.to(document.getElementById('bg-after'), 3, {
+      autoAlpha: 1,
+    });
   }
 }
 
-function createDraggable(elTag, finsihPos) {
+function createDraggable(elTag, finishPos) {
   return Draggable.create(elTag, {
     bounds: banner,
     liveSnap: {
-      points: [finsihPos],
+      points: [finishPos],
       radius: 20,
     },
     onDragEnd: checkIfPositionsCorrect,
@@ -38,3 +46,24 @@ const icon1 = createDraggable('#icon1', f1);
 const icon2 = createDraggable('#icon2', f2);
 const icon3 = createDraggable('#icon3', f3);
 const icon4 = createDraggable('#icon4', f4);
+
+// prygajushie ikonki
+TweenMax.to(document.querySelectorAll('.icon'), 0.5, {
+  y: -5,
+  repeat: -1,
+  yoyo: true,
+});
+
+// iscezajushie ikonki
+// TweenLite.to(document.querySelectorAll('.icon'), 0.5, {
+//   autoAlpha: 0,
+//   scale: 0,
+// });
+
+// before -> after
+// TweenMax.to(document.getElementById('bg-before'), 1, {
+//   autoAlpha: 0,
+// });
+// TweenMax.to(document.getElementById('bg-after'), 3, {
+//   autoAlpha: 1,
+// });
